@@ -1,5 +1,8 @@
 import headerBg from "../assets/headerbg.png";
+import AboutUsSection from "../components/AboutUsSection";
 import HeroSection from "../components/HeroSection";
+import ReservationSection from "../components/ReservationSection";
+import SelectionsSection from "../components/SelectionsSection";
 
 const Home = () => {
   return (
@@ -13,12 +16,9 @@ const Home = () => {
         secondaryAction={{ label: "SE MENUEN", to: "/menu" }}
       />
 
-      <section className="page">
-        <h2>Forside indhold</h2>
-        <p>
-          Placeholder: signaturretter, om sektion, fakta og reservation teaser.
-        </p>
-      </section>
+      <SelectionsSection />
+      <AboutUsSection />
+      <ReservationSection />
     </>
   );
 };
