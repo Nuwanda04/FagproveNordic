@@ -1750,3 +1750,508 @@
     color: rgba(255, 255, 255, 0.55);
   }
 }
+
+.login-page {
+  background: #f7f5f2;
+  padding: 96px 0 84px;
+}
+
+.login-panel {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  background: #f7f5f2;
+  border-top: 1px solid rgba(145, 107, 28, 0.22);
+  border-bottom: 1px solid rgba(145, 107, 28, 0.22);
+  border-radius: 0;
+}
+
+.login-panel__header {
+  min-height: 288px;
+  border-bottom: 1px solid rgba(145, 107, 28, 0.22);
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.login-panel__header-inner {
+  width: min(100%, 702px);
+  margin: 0 auto;
+}
+
+.login-panel__body {
+  padding: 30px;
+}
+
+.login-panel__back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #3d3d3d;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.login-panel__back-link:hover {
+  color: #121212;
+}
+
+.login-panel__title {
+  margin: 26px 0 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 64px);
+  line-height: 1;
+  color: #1a1a1a;
+}
+
+.login-panel__subtitle {
+  margin: 12px 0 0;
+  color: #3f3f3f;
+  font-family: var(--font-body);
+  font-size: clamp(16px, 2.1vw, 32px);
+  line-height: 1.2;
+}
+
+.login-panel__form {
+  width: min(100%, 702px);
+  margin: 0 auto;
+  min-height: 380px;
+  padding: 30px 32px;
+  background: rgba(247, 245, 242, 0.15);
+  border: 1px solid rgba(145, 107, 28, 0.22);
+  display: grid;
+  align-content: start;
+  gap: 22px;
+}
+
+.login-panel__error {
+  margin: 0;
+  color: #9a3131;
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+
+.login-panel__field {
+  display: grid;
+  gap: 10px;
+}
+
+.login-panel__label {
+  font-family: var(--font-body);
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  color: #6d6d6d;
+}
+
+.login-panel__field input {
+  width: 100%;
+  min-height: 60px;
+  border: 1px solid rgba(145, 107, 28, 0.61);
+  border-radius: 5px;
+  background: #f7f5f2;
+  color: #3d3d3d;
+  padding: 4px 10px;
+  font-size: 20px;
+  font-family: var(--font-body);
+}
+
+.login-panel__field input::placeholder {
+  color: #8b8b8b;
+}
+
+.login-panel__submit {
+  min-height: 60px;
+  border: 0;
+  background: #090909;
+  color: #f7f7f7;
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 180ms ease;
+}
+
+.login-panel__submit:hover:not(:disabled) {
+  background: #1a1a1a;
+}
+
+.login-panel__submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.backoffice-loading,
+.backoffice-denied,
+.backoffice-page {
+  background: #f7f5f2;
+  min-height: calc(100svh - 70px);
+  padding: 94px 20px 84px;
+}
+
+.backoffice-loading {
+  display: grid;
+  place-items: center;
+}
+
+.backoffice-loading p {
+  margin: 0;
+  color: #1a1a1a;
+  font-family: var(--font-body);
+  font-size: 18px;
+}
+
+.backoffice-denied {
+  display: grid;
+  place-items: center;
+}
+
+.backoffice-denied__card {
+  width: min(100%, 680px);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 30px 24px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.backoffice-denied__card h1 {
+  margin: 0;
+  color: #1a1a1a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+}
+
+.backoffice-denied__card p {
+  margin: 12px auto 0;
+  color: #4f4b49;
+  font-family: var(--font-body);
+  max-width: 42ch;
+}
+
+.backoffice-denied__card button {
+  margin-top: 24px;
+  min-height: 46px;
+  min-width: 180px;
+  border: 0.5px solid rgba(26, 26, 26, 0.35);
+  background: #7c632f;
+  color: #f7f5f2;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-body);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.backoffice-shell {
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.backoffice-topbar {
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 18px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.backoffice-topbar__eyebrow {
+  margin: 0;
+  color: #7c632f;
+  font-family: var(--font-body);
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.backoffice-topbar__title {
+  margin: 8px 0 0;
+  color: #1a1a1a;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.6rem);
+}
+
+.backoffice-topbar__meta {
+  margin: 8px 0 0;
+  color: #4f4b49;
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+
+.backoffice-topbar__logout {
+  min-height: 48px;
+  min-width: 160px;
+  border: 0.5px solid rgba(26, 26, 26, 0.35);
+  background: #7c632f;
+  color: #f7f5f2;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-body);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.backoffice-feedback {
+  border: 1px solid #cdb889;
+  background: #fbfaf7;
+  padding: 12px 14px;
+  display: grid;
+  gap: 6px;
+}
+
+.backoffice-feedback p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+
+.backoffice-feedback__message {
+  color: #3a6135;
+}
+
+.backoffice-feedback__error {
+  color: #7b2f2f;
+}
+
+.backoffice-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.backoffice-card {
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 18px;
+}
+
+.backoffice-card__title {
+  margin: 0;
+  color: #1a1a1a;
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4.5vw, 2.7rem);
+}
+
+.backoffice-form {
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.backoffice-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.backoffice-form span {
+  color: #7c632f;
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.backoffice-form input,
+.backoffice-form textarea,
+.backoffice-form select {
+  width: 100%;
+  border: 1px solid #cdb889;
+  background: #fbfaf7;
+  color: #1a1a1a;
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 10px 12px;
+}
+
+.backoffice-form textarea {
+  resize: vertical;
+}
+
+.backoffice-form__split {
+  display: grid;
+  gap: 12px;
+}
+
+.backoffice-form__checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+
+.backoffice-form__checkbox input {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+}
+
+.backoffice-form__checkbox span {
+  letter-spacing: 0;
+  font-size: 14px;
+  text-transform: none;
+  color: #1a1a1a;
+}
+
+.backoffice-form__submit {
+  min-height: 46px;
+  border: 0.5px solid rgba(26, 26, 26, 0.35);
+  background: #7c632f;
+  color: #f7f5f2;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-body);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.backoffice-list {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.backoffice-list__item {
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  display: grid;
+  gap: 12px;
+}
+
+.backoffice-list__media-wrap {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background: #f7f5f2;
+}
+
+.backoffice-list__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.backoffice-list__content h3 {
+  margin: 0;
+  color: #1a1a1a;
+  font-family: var(--font-heading);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.backoffice-list__content p {
+  margin: 8px 0 0;
+  color: #4f4b49;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.backoffice-list__meta {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.backoffice-list__meta span {
+  border: 1px solid #cdb889;
+  background: transparent;
+  color: #615846;
+  font-family: var(--font-body);
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.backoffice-list__meta .is-signature {
+  border-color: #7c632f;
+  background: #7c632f;
+  color: #ffffff;
+}
+
+.backoffice-list__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.backoffice-list__actions button {
+  min-height: 36px;
+  border: 1px solid #cdb889;
+  background: transparent;
+  color: #615846;
+  font-family: var(--font-body);
+  font-size: 13px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+@media (min-width: 760px) {
+  .login-page {
+    padding: 96px 30px 110px;
+  }
+
+  .login-panel__header-inner {
+    width: 614px;
+  }
+
+  .login-panel__form {
+    width: 702px;
+    gap: 32px;
+  }
+
+  .login-panel__title {
+    font-size: 64px;
+  }
+
+  .login-panel__submit {
+    font-size: 32px;
+  }
+
+  .backoffice-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .backoffice-form__split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .backoffice-list__item {
+    grid-template-columns: 180px minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .backoffice-list__media-wrap {
+    height: 120px;
+  }
+
+  .backoffice-list__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .backoffice-list__actions button {
+    min-width: 136px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .backoffice-page,
+  .backoffice-loading,
+  .backoffice-denied,
+  .login-page {
+    padding-top: 160px;
+  }
+}
+
