@@ -4,6 +4,11 @@ import HeroSection from "../components/HeroSection";
 import ReservationSection from "../components/ReservationSection";
 import SelectionsSection from "../components/SelectionsSection";
 
+/**
+ * Home komponenten repræsenterer applikationens forside.
+ * Den samler og præsenterer en række sektioner som Hero, udvalgte retter,
+ * "Om os"-information samt en genvej til at booke bord.
+ */
 const Home = () => {
   return (
     <>

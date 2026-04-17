@@ -105,7 +105,7 @@ const SelectionsSection = () => {
           }));
 
         if (!mounted) return;
-        setDishes(mapped.length === 3 ? mapped : fallbackSelections);
+        setDishes(mapped.length > 0 ? mapped : fallbackSelections);
       } catch {
         if (mounted) setDishes(fallbackSelections);
       } finally {
@@ -126,42 +126,60 @@ const SelectionsSection = () => {
   }, [dishes, loading]);
 
   return (
-    <section className="selections">
-      <div className="selections__inner">
-        <header className="selections__header">
-          <p className="selections__eyebrow">UDVALGTE RETTER</p>
-          <h2 className="selections__title">Vores signaturretter</h2>
-          <p className="selections__intro">
+    <section className="bg-[#f7f5f2] min-h-[500px] lg:min-h-[736px] px-4 py-10 lg:px-[30px] lg:py-[60px]">
+      <div className="max-w-[1240px] mx-auto">
+        <header className="text-center mb-8 lg:mb-12 flex flex-col items-center gap-3">
+          <p className="m-0 text-[#866727] font-[family-name:var(--font-body)] text-sm lg:text-base font-semibold tracking-[0.14em] uppercase">
+            UDVALGTE RETTER
+          </p>
+          <h2 className="m-0 font-[family-name:var(--font-heading)] text-[clamp(2rem,4vw,3.5rem)] font-light leading-[1.08] text-[#1a1a1a]">
+            Vores signaturretter
+          </h2>
+          <p className="m-0 text-[#5f5f5f] font-[family-name:var(--font-body)] text-base lg:text-lg leading-relaxed max-w-[50ch]">
             Hver af vores signaturretter er omhyggeligt sammensat af sæsonens
             bedste nordiske råvarer.
           </p>
         </header>
 
-        <div className="selections__cards">
+        <div className="flex flex-wrap justify-center gap-4 lg:flex-nowrap">
           {selections.slice(0, 3).map((dish) => (
-            <article key={dish.id} className="selections__card">
-              <div className="selections__card-media">
+            <article
+              key={dish.id}
+              className="w-full max-w-[344px] bg-white rounded-xl overflow-hidden shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+            >
+              <div className="relative h-[200px] lg:h-[250px]">
                 <img
                   src={dish.image || salmonImg}
                   alt={dish.title}
-                  className="selections__card-image"
+                  className="w-full h-full object-cover"
                 />
-                <span className="selections__card-badge">SIGNATUR</span>
+                <span className="absolute top-3 left-3 bg-[#7c632f] text-white font-[family-name:var(--font-body)] text-[10px] font-bold tracking-[0.12em] uppercase px-2.5 py-1 rounded-sm">
+                  SIGNATUR
+                </span>
               </div>
-              <div className="selections__card-body">
-                <p className="selections__card-category">{dish.category}</p>
-                <h3 className="selections__card-title">{dish.title}</h3>
-                <p className="selections__card-description">
+              <div className="p-4 flex flex-col gap-1.5">
+                <p className="m-0 text-[#866727] font-[family-name:var(--font-body)] text-[10px] font-bold tracking-[0.12em] uppercase">
+                  {dish.category}
+                </p>
+                <h3 className="m-0 font-[family-name:var(--font-heading)] text-[clamp(1.4rem,3vw,2.2rem)] font-light leading-[1.08] text-[#1a1a1a]">
+                  {dish.title}
+                </h3>
+                <p className="m-0 text-[#5f5f5f] font-[family-name:var(--font-body)] text-xs leading-relaxed">
                   {dish.description}
                 </p>
-                <p className="selections__card-price">{dish.price} kr.</p>
+                <p className="m-0 mt-1 text-[#866727] font-[family-name:var(--font-body)] text-sm font-semibold text-center">
+                  {dish.price} kr.
+                </p>
               </div>
             </article>
           ))}
         </div>
 
-        <div className="selections__cta-wrap">
-          <Link to="/menu" className="selections__cta">
+        <div className="mt-8 flex justify-center">
+          <Link
+            to="/menu"
+            className="w-full max-w-[344px] min-h-[60px] lg:min-h-[76px] bg-[#7c632f] text-[#f7f5f2] font-[family-name:var(--font-body)] text-xl lg:text-[26px] font-medium flex items-center justify-center shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+          >
             SE HELE MENUEN
           </Link>
         </div>

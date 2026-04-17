@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
 
 :root {
-  --color-bg: #0d1117;
-  --color-surface: #141b25;
-  --color-text: #f8fafc;
-  --color-muted: #d2d6dd;
-  --color-accent: #ce8b2c;
+  --color-bg: #f7f5f2;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-muted: #5f5f5f;
+  --color-accent: #7c632f;
+  --color-accent-light: #b39659;
   --font-body: "Inter", sans-serif;
   --font-heading: "Cormorant Garamond", serif;
 
@@ -29,9 +31,12 @@ body {
   font-family: var(--font-body);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-heading);
+}
+
+:where(input, button, textarea, select) {
+  font-family: var(--font-body);
 }
 
 #root {

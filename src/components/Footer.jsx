@@ -17,38 +17,46 @@ const openingHours = [
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer__inner">
-        <div className="footer__top">
-          <section
-            className="footer__brand"
-            aria-label="Nordic Table information"
-          >
-            <img src={logoWhite} alt="Nordic Table" className="footer__logo" />
-            <p className="footer__about">
+    <footer className="bg-[#1f1f1f]">
+      <div className="w-full max-w-[390px] lg:max-w-[1240px] mx-auto px-6 lg:px-10 pt-8 pb-4">
+        <div className="grid lg:grid-cols-4 gap-8">
+          {/* Brand */}
+          <section aria-label="Nordic Table information">
+            <img src={logoWhite} alt="Nordic Table" className="w-[61px] h-[29px] object-contain" />
+            <p className="w-[180px] mt-3 text-[#ccc] font-[family-name:var(--font-body)] text-xs font-normal leading-relaxed">
               Nordisk køkken med fokus på sæsonens råvarer, enkelhed og hygge.
               Velkommen til bordet.
             </p>
 
-            <div className="footer__social" aria-label="Sociale medier">
-              <a href="#" className="footer__social-link" aria-label="Facebook">
-                <FiFacebook aria-hidden="true" />
+            <div className="mt-4 flex gap-3.5" aria-label="Sociale medier">
+              <a
+                href="#"
+                className="w-10 h-10 border border-white/80 rounded-lg grid place-items-center text-white"
+                aria-label="Facebook"
+              >
+                <FiFacebook className="w-5 h-5" aria-hidden="true" />
               </a>
               <a
                 href="#"
-                className="footer__social-link"
+                className="w-10 h-10 border border-white/80 rounded-lg grid place-items-center text-white"
                 aria-label="Instagram"
               >
-                <FiInstagram aria-hidden="true" />
+                <FiInstagram className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
           </section>
 
-          <section className="footer__group" aria-label="Åbningstider">
-            <h3 className="footer__title">ÅBNINGSTIDER</h3>
-            <div className="footer__hours">
+          {/* Åbningstider */}
+          <section aria-label="Åbningstider">
+            <h3 className="m-0 mb-4 font-[family-name:var(--font-body)] text-sm font-bold tracking-[0.1em] text-[#999]">
+              ÅBNINGSTIDER
+            </h3>
+            <div className="grid gap-3">
               {openingHours.map((item) => (
-                <div key={item.day} className="footer__hours-row">
+                <div
+                  key={item.day}
+                  className="w-full flex justify-between text-[#ccc] font-[family-name:var(--font-body)] text-xs font-light tracking-[0.05em]"
+                >
                   <span>{item.day}</span>
                   <span>{item.time}</span>
                 </div>
@@ -56,35 +64,47 @@ const Footer = () => {
             </div>
           </section>
 
-          <section className="footer__group" aria-label="Hurtige links">
-            <h3 className="footer__title">HURTIGE LINKS</h3>
-            <div className="footer__links">
-              <Link to="/booking" className="footer__link">
+          {/* Hurtige links */}
+          <section aria-label="Hurtige links">
+            <h3 className="m-0 mb-4 font-[family-name:var(--font-body)] text-sm font-bold tracking-[0.1em] text-[#999]">
+              HURTIGE LINKS
+            </h3>
+            <div className="grid gap-3">
+              <Link
+                to="/booking"
+                className="text-[#ccc] font-[family-name:var(--font-body)] text-sm font-light tracking-[0.05em] hover:text-white hover:underline"
+              >
                 Book bord
               </Link>
-              <Link to="/login" className="footer__link">
+              <Link
+                to="/login"
+                className="text-[#ccc] font-[family-name:var(--font-body)] text-sm font-light tracking-[0.05em] hover:text-white hover:underline"
+              >
                 Personale
               </Link>
             </div>
           </section>
 
-          <section className="footer__group" aria-label="Kontakt">
-            <h3 className="footer__title">KONTAKT OS</h3>
-            <div className="footer__contact">
-              <p className="footer__contact-row">
-                <span className="footer__contact-icon" aria-hidden="true">
+          {/* Kontakt */}
+          <section aria-label="Kontakt">
+            <h3 className="m-0 mb-4 font-[family-name:var(--font-body)] text-sm font-bold tracking-[0.1em] text-[#999]">
+              KONTAKT OS
+            </h3>
+            <div className="grid gap-3">
+              <p className="m-0 flex items-center gap-2.5 text-[#ccc] font-[family-name:var(--font-body)] text-xs font-light tracking-[0.05em]">
+                <span className="text-[#c6a64b] text-base shrink-0" aria-hidden="true">
                   <FiMapPin />
                 </span>
                 <span>Nordgade 12, 9000 Aalborg</span>
               </p>
-              <p className="footer__contact-row">
-                <span className="footer__contact-icon" aria-hidden="true">
+              <p className="m-0 flex items-center gap-2.5 text-[#ccc] font-[family-name:var(--font-body)] text-xs font-light tracking-[0.05em]">
+                <span className="text-[#c6a64b] text-base shrink-0" aria-hidden="true">
                   <FiPhone />
                 </span>
                 <span>+45 12 34 56 78</span>
               </p>
-              <p className="footer__contact-row">
-                <span className="footer__contact-icon" aria-hidden="true">
+              <p className="m-0 flex items-center gap-2.5 text-[#ccc] font-[family-name:var(--font-body)] text-xs font-light tracking-[0.05em]">
+                <span className="text-[#c6a64b] text-base shrink-0" aria-hidden="true">
                   <FiMail />
                 </span>
                 <span>info@nordictable.dk</span>
@@ -93,9 +113,11 @@ const Footer = () => {
           </section>
         </div>
 
-        <div className="footer__bottom">
-          <p>© 2026 Nordic Table. Alle rettigheder forbeholdes</p>
-          <p className="footer__credit">Designet og udviklet med omhu</p>
+        {/* Bottom bar */}
+        <div className="mt-6 border-t border-white/10 pt-4 pb-2 flex items-center justify-center">
+          <p className="m-0 font-[family-name:var(--font-body)] text-xs font-extralight text-white/60">
+            © 2026 Nordic Table. Alle rettigheder forbeholdes
+          </p>
         </div>
       </div>
     </footer>

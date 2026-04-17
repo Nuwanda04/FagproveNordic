@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import "./App.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Backoffice from "./pages/Backoffice";
@@ -12,9 +13,9 @@ import NotFound from "./pages/NotFound";
 function App() {
   return (
     <Router>
-      <div className="app-shell">
+      <div className="min-h-svh flex flex-col">
         <Header />
-        <main className="app-main">
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
@@ -25,6 +26,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <ToastContainer position="bottom-right" autoClose={4000} />
       </div>
     </Router>
   );
